@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="utf-8">
+  <title>ngSwipe example</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style type="text/css">
+    div { margin:30px; padding:30px; background:silver;}
+    div:nth-child(2n) {background-color: blue; }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-touch.min.js"></script>
+  
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="AppController">
+  <div ng-show="!showActions" ng-swipe-left="showActions = false">
+    <p>Left Panel</p>
+  </div>
+  <div ng-show="showActions" ng-swipe-right="showActions = true">
+	<p>Right Panel</p>
+  </div>
+    <button ng-click="leftClick()">Left</button>
+    <button ng-click="rightClick()">Right</button>
+  
+  
+</body>
+</html>
+
